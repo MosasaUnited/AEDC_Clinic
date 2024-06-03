@@ -3,27 +3,27 @@ import 'package:aedc_clinic/features/onboarding/data/models/onboarding_model.dar
 
 List<OnboardingModel> onBoardingList = [
   OnboardingModel(
-    title: 'Choose Product',
+    title: 'شركة الخدمات الطبية',
     image: LottieAssets.onBoardingImageOne,
     body:
-        'الشركة تقوم بعلاج العاملين أو المحالين للمعاش و أسرهم على نفقة الشركة ',
+        'شركة الخدمات الطبية الشريك الدائم لشركة الأسكندرية للتوزيع لتقديم الرعاية الصحية المتكاملة ',
   ),
   OnboardingModel(
-    title: 'Choose Product',
+    title: 'الرعاية الشاملة',
     image: LottieAssets.onBoardingImageTwo,
     body:
-        'الشركة تقوم بعلاج العاملين أو المحالين للمعاش و أسرهم على نفقة الشركة ',
+        'تقوم الشركة بالفحوصات الطبية اللازمة و الدورية و الطارئة للعاملين و السادة المحالين للمعاش  ',
   ),
   OnboardingModel(
-    title: 'Choose Product',
+    title: 'الأدوية',
     image: LottieAssets.onBoardingImageThree,
     body:
-        'الشركة تقوم بعلاج العاملين أو المحالين للمعاش و أسرهم على نفقة الشركة ',
+        ' تتعاون شركة الخدمات الطبية مع صيدليات مميزة لتوفير الأدوية للعاملين و المعاشات و بأسعار مخفضة لأسرهم',
   ),
   OnboardingModel(
-    title: 'Choose Product',
+    title: 'العمليات الجراحية',
     image: LottieAssets.onBoardingImageFour,
     body:
-        'الشركة تقوم بعلاج العاملين أو المحالين للمعاش و أسرهم على نفقة الشركة ',
+        'فى حال احتاج المريض لعملية جراحية نتعاون مع أفضل المستشفيات و المراكز الطبية لإجراء العملية المطلوبة',
   ),
 ];
