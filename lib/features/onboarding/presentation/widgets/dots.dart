@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/constants/colors.dart';
+import '../../../../core/theme/colors.dart';
 import '../../data/static/static.dart';
 import '../../logic/cubit/onboarding_cubit.dart';
 

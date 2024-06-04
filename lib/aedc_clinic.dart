@@ -14,10 +14,11 @@ class ClinicAEDC extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'AEDC Clinic',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
+          fontFamily: 'Cairo',
         ),
         routerConfig: AppRouter.router,
       ),

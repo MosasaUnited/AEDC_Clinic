@@ -1,6 +1,9 @@
 import 'package:aedc_clinic/features/onboarding/data/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../core/router/app_router.dart';
 
 part 'onboarding_state.dart';
 
@@ -11,12 +14,12 @@ class OnboardingCubit extends Cubit<OnboardingState> {
 
   OnboardingCubit() : super(OnboardingInitialState());
 
-  void next() {
+  void next(BuildContext context) {
     emit(OnboardingNext());
     currentPage++;
 
     if (currentPage > onBoardingList.length - 1) {
-      print('Go To Login Page'); //TODO
+      GoRouter.of(context).push(AppRouter.kLogin);
     } else {
       pageController.animateToPage(
         currentPage,

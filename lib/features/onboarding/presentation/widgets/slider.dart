@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../../core/constants/colors.dart';
-import '../../../../core/constants/custom_button.dart';
+import '../../../../core/theme/colors.dart';
+import '../../../../core/widgets/custom_button.dart';
 import '../../data/static/static.dart';
 import '../../logic/cubit/onboarding_cubit.dart';
 import 'dots.dart';
@@ -69,14 +69,17 @@ class CustomSliderOnboarding extends StatelessWidget {
                         height: 50.h,
                       ), // Dots widget will now use the same cubit
                       CustomButton(
-                        backgroundColor: MyColors.appColor,
+                        backgroundColor:
+                            cubit.currentPage == onBoardingList.length - 1
+                                ? Colors.redAccent
+                                : MyColors.appColor,
                         textColor: Colors.white,
                         // text: 'Continue',
                         text: cubit.currentPage == onBoardingList.length - 1
                             ? 'تسجيل الدخول'
                             : 'الـتـالـى',
                         onPressed: () {
-                          cubit.next();
+                          cubit.next(context);
                         },
                         borderRadius: BorderRadius.circular(25),
                       ),

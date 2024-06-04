@@ -1,4 +1,4 @@
-import 'package:aedc_clinic/core/constants/styles.dart';
+import 'package:aedc_clinic/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
