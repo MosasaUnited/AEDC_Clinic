@@ -66,6 +66,8 @@ dependencies:
   shared_preferences: ^2.2.3
   #Splash Screen
   flutter_native_splash: ^2.4.0
+  #Google Fonts
+  google_fonts: ^6.2.1
 
   flutter:
     sdk: flutter
