@@ -64,6 +64,8 @@ dependencies:
   cached_network_image: ^3.2.3
   # Flutter plugin for reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
   shared_preferences: ^2.2.3
+  #Splash Screen
+  flutter_native_splash: ^2.4.0
 
   flutter:
     sdk: flutter
