@@ -1,17 +1,16 @@
 # AEDC Clinic App Overview
 
-The AEDC Clinic App is a comprehensive solution designed to streamline the appointment booking process for the Alexandria Electricity Distribution Company Clinic. This application aims to enhance patient experience by providing a user-friendly platform for scheduling appointments.
+The AEDC Clinic App is a comprehensive solution designed to streamline the appointment booking process for the Alexandria Electricity Distribution Company Clinic. This application aims to enhance the patient experience by providing a user-friendly platform for scheduling appointments.
 
 ## Features
 
 ### Splash Screen
 ![Screenshot_20240611_224441](https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/b7852833-d676-4c89-9241-52c58d27a63e)
 
-The splash screen is designed to be compatible across a wide range of Android versions, including the latest Android 12+ and earlier versions.
+The splash screen is designed to be compatible with a wide range of Android versions, including the latest Android 12+ and earlier versions.
 
 ### Onboarding Screen
-![Screenshot_2024 06 12_01 24 54 731](https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/04438a32-fce2-4c56-bf44-35298c32d1aa)
-![Screenshot_2024 06 12_01 25 05 281](https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/43addea8-e972-4fde-b096-66c624087f2c)
+![Screenshot_2024 06 12_01 24 54 731](https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/04438a32-fce2-4c56-bf44-35298c32d1aa)![Screenshot_2024 06 12_01 25 05 281](https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/43addea8-e972-4fde-b096-66c624087f2c)
 ![Screenshot_2024 06 12_01 25 13 180](https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/083cfa56-187d-42c1-9a94-c127fedccfb1)
 ![Screenshot_2024 06 12_01 25 18 597](https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/1dfbf9de-36f5-492f-8f9f-108e16b624f0)
 
