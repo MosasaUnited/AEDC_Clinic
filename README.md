@@ -5,7 +5,8 @@ The AEDC Clinic App is a comprehensive solution designed to streamline the appoi
 ## Features
 
 ### Splash Screen
-![Screenshot_20240611_224441](https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/b7852833-d676-4c89-9241-52c58d27a63e)
+![Screenshot_20240611_224441]()
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/b7852833-d676-4c89-9241-52c58d27a63e" width="317" height="567">
 
 The splash screen is designed to be compatible with a wide range of Android versions, including the latest Android 12+ and earlier versions.
 
