@@ -30,9 +30,9 @@ Each screen provides valuable insights into the services and ethos of the Clinic
 
 ### Choose Clinic
 
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/16c4f6e3-3a4f-4a82-a27b-9aabe2cec74e" width="317" height="567">
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/b4fce334-eaf7-44fc-bb55-25449a21b45e" width="317" height="567">
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/8c05fb31-52cb-4b7e-ac59-f50e3617c988" width="317" height="567">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/16c4f6e3-3a4f-4a82-a27b-9aabe2cec74e" width="200" height="350">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/b4fce334-eaf7-44fc-bb55-25449a21b45e" width="200" height="350">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/8c05fb31-52cb-4b7e-ac59-f50e3617c988" width="200" height="350">
 
 This screen is designed to be interactive, allowing users to tap on cards to select their desired clinic branch.
 
