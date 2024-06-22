@@ -11,10 +11,10 @@ The splash screen is designed to be compatible with a wide range of Android vers
 
 ### Onboarding Screen
 <div>
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/04438a32-fce2-4c56-bf44-35298c32d1aa" width="200" height="300">
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/43addea8-e972-4fde-b096-66c624087f2c" width="200" height="300">
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/083cfa56-187d-42c1-9a94-c127fedccfb1" width="200" height="300">
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/1dfbf9de-36f5-492f-8f9f-108e16b624f0" width="200" height="300">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/04438a32-fce2-4c56-bf44-35298c32d1aa" width="200" height="320">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/43addea8-e972-4fde-b096-66c624087f2c" width="200" height="320">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/083cfa56-187d-42c1-9a94-c127fedccfb1" width="200" height="320">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/1dfbf9de-36f5-492f-8f9f-108e16b624f0" width="200" height="320">
 </div>
 Each screen provides valuable insights into the services and ethos of the Clinical Service Provider Company.
 
