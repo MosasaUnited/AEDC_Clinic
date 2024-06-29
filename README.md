@@ -11,10 +11,10 @@ The splash screen is designed to be compatible with a wide range of Android vers
 
 ### Onboarding Screen
 <div>
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/04438a32-fce2-4c56-bf44-35298c32d1aa" width="200" height="320">
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/43addea8-e972-4fde-b096-66c624087f2c" width="200" height="320">
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/083cfa56-187d-42c1-9a94-c127fedccfb1" width="200" height="320">
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/1dfbf9de-36f5-492f-8f9f-108e16b624f0" width="200" height="320">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/04438a32-fce2-4c56-bf44-35298c32d1aa" width="200" height="350">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/43addea8-e972-4fde-b096-66c624087f2c" width="200" height="350">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/083cfa56-187d-42c1-9a94-c127fedccfb1" width="200" height="350">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/1dfbf9de-36f5-492f-8f9f-108e16b624f0" width="200" height="350">
 </div>
 Each screen provides valuable insights into the services and ethos of the Clinical Service Provider Company.
 
@@ -30,9 +30,9 @@ Each screen provides valuable insights into the services and ethos of the Clinic
 
 ### Choose Clinic
 
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/16c4f6e3-3a4f-4a82-a27b-9aabe2cec74e" width="317" height="567">
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/b4fce334-eaf7-44fc-bb55-25449a21b45e" width="317" height="567">
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/8c05fb31-52cb-4b7e-ac59-f50e3617c988" width="317" height="567">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/16c4f6e3-3a4f-4a82-a27b-9aabe2cec74e" width="200" height="350">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/b4fce334-eaf7-44fc-bb55-25449a21b45e" width="200" height="350">
+<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/8c05fb31-52cb-4b7e-ac59-f50e3617c988" width="200" height="350">
 
 This screen is designed to be interactive, allowing users to tap on cards to select their desired clinic branch.
 
