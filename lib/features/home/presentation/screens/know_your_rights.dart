@@ -13,7 +13,7 @@ class KnowYourRights extends StatelessWidget {
       width: 310.w,
       child: ElevatedButton(
         onPressed: () {
-          GoRouter.of(context).push(AppRouter.kKnowYourRightsReader);
+          GoRouter.of(context).push(AppRouter.kKnowRightsReader);
         },
         child: const Row(
           children: [

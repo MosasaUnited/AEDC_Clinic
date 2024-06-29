@@ -68,6 +68,8 @@ dependencies:
   flutter_native_splash: ^2.4.0
   #Google Fonts
   google_fonts: ^6.2.1
+  # PDF Viewer
+  syncfusion_flutter_pdfviewer: ^26.1.39
 
   flutter:
     sdk: flutter
