@@ -3,7 +3,9 @@ import 'package:aedc_clinic/core/theme/colors.dart';
 import 'package:aedc_clinic/core/theme/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../core/router/app_router.dart';
 import '../../../core/theme/styles.dart';
 import '../../../core/widgets/app_text_button.dart';
 import '../../../core/widgets/app_text_form_field.dart';
@@ -72,7 +74,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         buttonText: 'دخـــــــــــول',
                         textStyle: Styles.textStyle16.copyWith(
                             color: Colors.white, fontWeight: FontWeight.w700),
-                        onPressed: () {},
+                        onPressed: () {
+                          GoRouter.of(context).push(AppRouter.kChooseClinic);
+                        },
                       ),
                       SizedBox(
                         height: 20.h,

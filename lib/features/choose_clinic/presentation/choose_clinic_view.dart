@@ -6,12 +6,6 @@ class ChooseClinicView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        children: [
-          TappableChooseClinicScreen(),
-        ],
-      ),
-    );
+    return const TappableChooseClinicScreen();
   }
 }
