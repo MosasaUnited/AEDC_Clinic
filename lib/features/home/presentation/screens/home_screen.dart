@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theme/styles.dart';
-import '../widgets/know_your_rights_reader.dart';
 import '../widgets/tickting_buttons.dart';
+import 'know_your_rights.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -25,7 +25,10 @@ class HomeScreen extends StatelessWidget {
                 textDirection: TextDirection.rtl,
               ),
               const TicketButtons(),
-              KnowYourRightsPdfReader(),
+              SizedBox(
+                height: 40.h,
+              ),
+              const KnowYourRights(),
             ],
           ),
         ),

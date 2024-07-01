@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/theme/colors.dart';
+
 class KnowYourRights extends StatelessWidget {
   const KnowYourRights({super.key});
 
@@ -12,12 +14,24 @@ class KnowYourRights extends StatelessWidget {
       height: 80.h,
       width: 310.w,
       child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            backgroundColor: MyColors.appColor, shape: const LinearBorder()),
         onPressed: () {
           GoRouter.of(context).push(AppRouter.kKnowRightsReader);
         },
-        child: const Row(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('إعرف حقوقك'),
+            Text(
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.rtl,
+              'إعرف حقوقك',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w900,
+                fontSize: 20.sp,
+              ),
+            ),
           ],
         ),
       ),

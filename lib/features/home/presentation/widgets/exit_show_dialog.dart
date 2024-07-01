@@ -8,17 +8,21 @@ class ExitShowDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text('Exit Confirmation'),
+      contentPadding: const EdgeInsets.all(15),
+      title: const Text('تأكيد الخروج'),
       icon: Icon(Icons.add_alert, color: Colors.amberAccent.shade700),
-      content: const Text('Are you sure you want to exit ?'),
+      content: const Text(
+        'هل تريد فعلا الخروج ؟',
+        textAlign: TextAlign.center,
+      ),
       actions: [
         TextButton(
           onPressed: () => GoRouter.of(context).pop(),
-          child: const Text('Cancel'),
+          child: const Text('إلغاء'),
         ),
         TextButton(
           onPressed: () => SystemNavigator.pop(),
-          child: const Text('Exit'),
+          child: const Text('موافق'),
         ),
       ],
     );

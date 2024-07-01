@@ -1,22 +1,28 @@
-import 'package:aedc_clinic/features/home/data/models/document_model.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-class KnowYourRightsPdfReader extends StatelessWidget {
-  late DocumentModel? doc;
+import '../../data/models/document_model.dart';
+
+class KnowYourRightsPdfReader extends StatefulWidget {
+  DocumentModel doc = DocumentModel('لائحة علاج العاملين بالكهرباء',
+      'https://drive.google.com/file/d/1zwTYC9SXsGi1y4zbrecbq481j1kctkPL/view');
 
   KnowYourRightsPdfReader({super.key});
 
+  @override
+  State<KnowYourRightsPdfReader> createState() => _ReaderScreenState();
+}
+
+class _ReaderScreenState extends State<KnowYourRightsPdfReader> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Text(doc!.docTitle!),
+        title: Text(widget.doc.docTitle!),
       ),
       body: SizedBox(
-        // Have To Add Pdf Viewer Package
-        child: SfPdfViewer.network(doc!.docUrl!),
+        child: SfPdfViewer.network(widget.doc.docUrl!),
       ),
     );
   }
