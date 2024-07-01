@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/constants/icon_assets.dart';
 import '../../../../core/theme/colors.dart';
 
 class KnowYourRights extends StatelessWidget {
@@ -22,6 +23,14 @@ class KnowYourRights extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset(
+              alignment: Alignment.centerLeft,
+              fit: BoxFit.cover,
+              IconAssets.ash3a,
+              height: 35.h,
+              width: 35.w,
+            ),
+            const Spacer(),
             Text(
               textAlign: TextAlign.center,
               textDirection: TextDirection.rtl,
