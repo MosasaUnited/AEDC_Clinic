@@ -1,3 +1,4 @@
+import 'package:aedc_clinic/features/home/presentation/screens/contact_us.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -29,6 +30,13 @@ class HomeScreen extends StatelessWidget {
                 height: 40.h,
               ),
               const KnowYourRights(),
+              SizedBox(
+                height: 40.h,
+              ),
+              const ContactUs(),
+              SizedBox(
+                height: 40.h,
+              ),
             ],
           ),
         ),

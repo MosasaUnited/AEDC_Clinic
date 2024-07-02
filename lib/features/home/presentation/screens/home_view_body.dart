@@ -57,7 +57,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                         });
                   },
                   icon: Image.asset(
-                    IconAssets.exitIconImage,
+                    IconAssets.exit,
                     cacheHeight: 20,
                     cacheWidth: 20,
                   ),

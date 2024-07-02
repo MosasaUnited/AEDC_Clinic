@@ -26,7 +26,7 @@ class KnowYourRights extends StatelessWidget {
             Image.asset(
               alignment: Alignment.centerLeft,
               fit: BoxFit.cover,
-              IconAssets.ash3a,
+              IconAssets.rights,
               height: 35.h,
               width: 35.w,
             ),
