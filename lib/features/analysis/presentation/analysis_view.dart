@@ -1,3 +1,4 @@
+import 'package:aedc_clinic/features/analysis/presentation/screens/analysis_view_body.dart';
 import 'package:flutter/material.dart';
 
 class AnalysisView extends StatelessWidget {
@@ -5,6 +6,10 @@ class AnalysisView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const SafeArea(
+      child: Scaffold(
+        body: AnalysisViewBody(),
+      ),
+    );
   }
 }

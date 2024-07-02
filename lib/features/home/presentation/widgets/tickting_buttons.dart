@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/constants/icon_assets.dart';
+import '../../../../core/router/app_router.dart';
 import 'custom_elevated_button.dart';
 
 class TicketButtons extends StatelessWidget {
@@ -22,7 +24,9 @@ class TicketButtons extends StatelessWidget {
             CustomElevatedButton(
               text: 'استشارة',
               icon: IconAssets.estshara,
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kExamination);
+              },
             ),
             SizedBox(
               width: 20.w,
@@ -30,7 +34,9 @@ class TicketButtons extends StatelessWidget {
             CustomElevatedButton(
               text: 'تـحـالـيـل',
               icon: IconAssets.t7alil,
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kAnalysis);
+              },
             ),
           ],
         ),
@@ -44,7 +50,9 @@ class TicketButtons extends StatelessWidget {
             CustomElevatedButton(
               text: 'آشــعــة',
               icon: IconAssets.ash3a,
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kXray);
+              },
             ),
             SizedBox(
               width: 20.w,
@@ -52,7 +60,9 @@ class TicketButtons extends StatelessWidget {
             CustomElevatedButton(
               text: 'علاج شهرى',
               icon: IconAssets.monthlyPills,
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kMonthlyTreatment);
+              },
             ),
             SizedBox(
               width: 5.w,
@@ -69,7 +79,9 @@ class TicketButtons extends StatelessWidget {
             CustomElevatedButton(
               text: 'أســنــان',
               icon: IconAssets.teethCheck,
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kTeeth);
+              },
             ),
             SizedBox(
               width: 20.w,
@@ -77,7 +89,9 @@ class TicketButtons extends StatelessWidget {
             CustomElevatedButton(
               text: 'قومسيون',
               icon: IconAssets.qomsion,
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kCommission);
+              },
             ),
           ],
         ),

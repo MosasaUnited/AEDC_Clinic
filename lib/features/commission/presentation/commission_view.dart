@@ -1,3 +1,4 @@
+import 'package:aedc_clinic/features/commission/presentation/screens/commission_view_body.dart';
 import 'package:flutter/material.dart';
 
 class CommissionView extends StatelessWidget {
@@ -5,6 +6,10 @@ class CommissionView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const SafeArea(
+      child: Scaffold(
+        body: CommissionViewBody(),
+      ),
+    );
   }
 }
