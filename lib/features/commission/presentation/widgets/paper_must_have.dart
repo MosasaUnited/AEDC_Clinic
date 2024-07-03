@@ -11,9 +11,6 @@ class PaperMustHave extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: 20.h,
-        ),
         Text(
           textDirection: TextDirection.rtl,
           'تأكد من وجود الأوراق التالية معك لتقديم القومسيون الطبى :',
