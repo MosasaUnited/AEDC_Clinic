@@ -15,15 +15,17 @@ class ImportantNotice extends StatelessWidget {
           children: [
             Text(
               'ملاحظة هامة',
-              style: Styles.textStyle20,
+              style: Styles.textStyle20.copyWith(
+                fontWeight: FontWeight.w800,
+              ),
             ),
             SizedBox(
-              width: 5.w,
+              width: 8.w,
             ),
-            Icon(
+            const Icon(
               Icons.arrow_back_ios_outlined,
             ),
-            Icon(
+            const Icon(
               Icons.arrow_back_ios_outlined,
             ),
           ],
