@@ -1,3 +1,4 @@
+import 'package:aedc_clinic/core/widgets/simple_appbar.dart';
 import 'package:aedc_clinic/features/examination/presentation/screens/examination_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -6,9 +7,12 @@ class ExaminationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
         child: Scaffold(
-      body: ExaminationViewBody(),
+      appBar: AppBar(
+        leading: const SimpleAppbar(),
+      ),
+      body: const ExaminationViewBody(),
     ));
   }
 }

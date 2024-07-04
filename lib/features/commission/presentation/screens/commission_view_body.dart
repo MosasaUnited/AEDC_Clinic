@@ -25,7 +25,6 @@ class CommissionViewBody extends StatelessWidget {
           Center(
             child: CustomButtonAnimation(
               onPressed: () {},
-              color: Colors.blue,
               child: Text(
                 textAlign: TextAlign.center,
                 'اختار ميعاد لتقديم الأوراق المطلوبة',
