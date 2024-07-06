@@ -1,3 +1,4 @@
+import 'package:aedc_clinic/features/teeth/presentation/widgets/teeth_file_picker.dart';
 import 'package:aedc_clinic/features/teeth/presentation/widgets/teeth_important_notice.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -174,8 +175,14 @@ class _TeethViewBodyState extends State<TeethViewBody> {
                 SizedBox(
                   height: 10.h,
                 ),
-                const TeethImportantNotice(),
-                // TODO: Add File Picker To Upload Teeth Commission Image
+                const TeethImportantNotice(
+                  text:
+                      'إذا كان لديك قومسيون من مستشفى أو مركز الأسنان تأكد من وجود التحويل الخاص بك معك عند وجودك فى اليوم المحدد',
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                const TeethFilePicker(),
                 SizedBox(
                   height: 50.h,
                 ),

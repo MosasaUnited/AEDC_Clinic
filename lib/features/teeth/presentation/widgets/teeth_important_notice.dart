@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../../core/theme/styles.dart';
 
 class TeethImportantNotice extends StatelessWidget {
-  const TeethImportantNotice({super.key});
+  const TeethImportantNotice({super.key, required this.text});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +14,8 @@ class TeethImportantNotice extends StatelessWidget {
       children: [
         Text(
           textDirection: TextDirection.rtl,
-          'إذا كان لديك قومسيون من مستشفى أو مركز الأسنان تأكد من وجود التحويل الخاص بك معك عند وجودك فى اليوم المحدد',
-          style: Styles.textStyle18.copyWith(fontWeight: FontWeight.w500),
-        ),
-        Text(
-          textDirection: TextDirection.rtl,
-          'من فضلك ارفع صورة القومسيون من هنا : ',
-          style: Styles.textStyle18.copyWith(fontWeight: FontWeight.w500),
+          text,
+          style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w500),
         ),
       ],
     );
