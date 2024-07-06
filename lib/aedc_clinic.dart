@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,6 +15,8 @@ class ClinicAEDC extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       child: MaterialApp.router(
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
         title: 'AEDC Clinic',
         themeMode: ThemeMode.system,

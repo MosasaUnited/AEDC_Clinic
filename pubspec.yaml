@@ -58,7 +58,7 @@ dependencies:
   # Toast
   fluttertoast: ^8.2.1
 
-  # Image Picker
+  # Pick Image from Gallery and Camera
   image_picker: ^1.1.2
   # Image Caching
   cached_network_image: ^3.2.3
@@ -72,7 +72,8 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^26.1.39
   # Links Launcher
   url_launcher: ^6.3.0
-
+  # Device Preview for Flutter
+  device_preview: ^1.2.0
   flutter:
     sdk: flutter
 
