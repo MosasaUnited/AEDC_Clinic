@@ -15,8 +15,6 @@ class AnalysisViewBody extends StatefulWidget {
 }
 
 class _AnalysisViewBodyState extends State<AnalysisViewBody> {
-  final pickTimeController = TextEditingController();
-
   final pickDateController = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
@@ -35,13 +33,13 @@ class _AnalysisViewBodyState extends State<AnalysisViewBody> {
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            children: [
-              SingleChildScrollView(
-                child: Column(
+      child: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              children: [
+                Column(
                   children: [
                     SvgPicture.asset(
                       SvgAssets.medicalAnalysisSvg,
@@ -114,62 +112,38 @@ class _AnalysisViewBodyState extends State<AnalysisViewBody> {
                         }
                       },
                     ),
-                    SizedBox(height: 20.h),
-                    TextFormField(
-                      controller: pickTimeController,
-                      decoration: const InputDecoration(
-                          hintText: 'إختر الوقت', border: OutlineInputBorder()),
-                      readOnly: true,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'من فضلك اختار الوقت';
-                        }
-                        return null;
-                      },
-                      onTap: () async {
-                        final selectTime = await showTimePicker(
-                          context: context,
-                          initialTime: TimeOfDay.now(),
-                        );
-                        if (selectTime != null) {
-                          print(selectTime);
-                          final formattedTime = selectTime.format(context);
-                          pickTimeController.text = formattedTime;
-                        } else {
-                          print('Time is Not Selected');
-                        }
-                      },
-                    ),
                   ],
                 ),
-              ),
-              const Spacer(),
-              CustomButtonAnimation(
-                onPressed: () async {
-                  if (formKey.currentState!.validate()) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text(
-                          'تم حجز الميعاد بنجاح',
-                          style: TextStyle(
-                              color: Colors.white,
-                              decorationStyle: TextDecorationStyle.double),
-                        ),
-                        backgroundColor: Colors.green,
-                      ),
-                    );
-                  }
-                },
-                child: Text(
-                  textAlign: TextAlign.center,
-                  'إحجز ميعاد',
-                  style: Styles.textStyle20.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                  ),
+                SizedBox(
+                  height: 50.h,
                 ),
-              )
-            ],
+                CustomButtonAnimation(
+                  onPressed: () async {
+                    if (formKey.currentState!.validate()) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text(
+                            'تم حجز الميعاد بنجاح',
+                            style: TextStyle(
+                                color: Colors.white,
+                                decorationStyle: TextDecorationStyle.double),
+                          ),
+                          backgroundColor: Colors.green,
+                        ),
+                      );
+                    }
+                  },
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'إحجز ميعاد',
+                    style: Styles.textStyle20.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
