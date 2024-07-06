@@ -49,7 +49,7 @@ class CommissionViewBody extends StatelessWidget {
                       fontSize: 15.sp),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
