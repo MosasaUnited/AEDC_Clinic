@@ -6,8 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/constants/svg_assets.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/custom_button_animation.dart';
-import '../widgets/choose_xray_hos_text.dart';
-import '../widgets/xray_paper_exist_notice.dart';
+import '../widgets/xray_paper_notice.dart';
 
 class XrayViewBody extends StatefulWidget {
   const XrayViewBody({super.key});
@@ -17,15 +16,13 @@ class XrayViewBody extends StatefulWidget {
 }
 
 class _XrayViewBodyState extends State<XrayViewBody> {
-  final pickTimeController = TextEditingController();
-
   final pickDateController = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
 
   final List<String> dropDownItems = [
     '',
-    'دار الأسعة',
+    'دار الأشعة',
     'مركز القلب و الصدر',
     'ICC Scan',
   ];
@@ -51,12 +48,17 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                     SizedBox(
                       height: 50.h,
                     ),
-                    const XrayPaperExistNotice(),
+                    const XrayPaperNotice(
+                      text:
+                          'إذا كان لديك تحويل من مستشفى لعمل آشعة ارفع صورة التحويل من هنا',
+                    ),
                     //TODO: Add Teeth Commission File or Image Picker
                     SizedBox(
                       height: 15.h,
                     ),
-                    const ChooseXrayHosText(),
+                    const XrayPaperNotice(
+                        text:
+                            'اختر مركز الأشعة المراد عمل به الآشعة من القائمة التالية'),
                     SizedBox(
                       height: 20.h,
                     ),
@@ -153,7 +155,14 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                       fontWeight: FontWeight.w900,
                     ),
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 50.h,
+                ),
+                const XrayPaperNotice(
+                  text:
+                      'إذا كان ليس لديك تحويل من مستشفى لعمل آشعة . برجاء حجز استشارة من هنا ',
+                ),
               ],
             ),
           ),

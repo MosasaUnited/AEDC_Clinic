@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/theme/styles.dart';
 
-class XrayPaperExistNotice extends StatelessWidget {
-  const XrayPaperExistNotice({super.key});
+class XrayPaperNotice extends StatelessWidget {
+  const XrayPaperNotice({super.key, required this.text});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class XrayPaperExistNotice extends StatelessWidget {
       children: [
         Text(
           textDirection: TextDirection.rtl,
-          'إذا كان لديك تحويل من مستشفى لعمل آشعة ارفع صورة التحويل من هنا ',
+          text,
           style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w500),
         ),
       ],
