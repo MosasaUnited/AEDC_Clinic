@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/constants/svg_assets.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/custom_button_animation.dart';
+import '../../../../core/widgets/custom_date_picker.dart';
 import '../widgets/xray_paper_notice.dart';
 
 class XrayViewBody extends StatefulWidget {
@@ -92,6 +93,10 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                     ),
                     SizedBox(
                       height: 20.h,
+                    ),
+                    CustomDatePicker(
+                      hintText: 'اختار اليوم',
+                      validatorText: 'من فضلك اختر اليوم',
                     ),
                     TextFormField(
                       controller: pickDateController,
