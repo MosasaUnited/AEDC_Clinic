@@ -6,6 +6,8 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/constants/svg_assets.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/custom_button_animation.dart';
+import '../widgets/choose_xray_hos_text.dart';
+import '../widgets/xray_paper_exist_notice.dart';
 
 class XrayViewBody extends StatefulWidget {
   const XrayViewBody({super.key});
@@ -33,13 +35,13 @@ class _XrayViewBodyState extends State<XrayViewBody> {
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            children: [
-              SingleChildScrollView(
-                child: Column(
+      child: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              children: [
+                Column(
                   children: [
                     SvgPicture.asset(
                       SvgAssets.xraySvg,
@@ -48,6 +50,15 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                     ),
                     SizedBox(
                       height: 50.h,
+                    ),
+                    const XrayPaperExistNotice(),
+                    //TODO: Add Teeth Commission File or Image Picker
+                    SizedBox(
+                      height: 15.h,
+                    ),
+                    const ChooseXrayHosText(),
+                    SizedBox(
+                      height: 20.h,
                     ),
                     DropdownButtonFormField(
                       value: selectedTextFieldItem,
@@ -113,61 +124,38 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                       },
                     ),
                     SizedBox(height: 20.h),
-                    TextFormField(
-                      controller: pickTimeController,
-                      decoration: const InputDecoration(
-                          hintText: 'إختر الوقت', border: OutlineInputBorder()),
-                      readOnly: true,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'من فضلك اختار الوقت';
-                        }
-                        return null;
-                      },
-                      onTap: () async {
-                        final selectTime = await showTimePicker(
-                          context: context,
-                          initialTime: TimeOfDay.now(),
-                        );
-                        if (selectTime != null) {
-                          print(selectTime);
-                          final formattedTime = selectTime.format(context);
-                          pickTimeController.text = formattedTime;
-                        } else {
-                          print('Time is Not Selected');
-                        }
-                      },
-                    ),
                   ],
                 ),
-              ),
-              const Spacer(),
-              CustomButtonAnimation(
-                onPressed: () async {
-                  if (formKey.currentState!.validate()) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text(
-                          'تم حجز الميعاد بنجاح',
-                          style: TextStyle(
-                              color: Colors.white,
-                              decorationStyle: TextDecorationStyle.double),
-                        ),
-                        backgroundColor: Colors.green,
-                      ),
-                    );
-                  }
-                },
-                child: Text(
-                  textAlign: TextAlign.center,
-                  'إحجز ميعاد',
-                  style: Styles.textStyle20.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                  ),
+                SizedBox(
+                  height: 50.h,
                 ),
-              )
-            ],
+                CustomButtonAnimation(
+                  onPressed: () async {
+                    if (formKey.currentState!.validate()) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text(
+                            'تم حجز الميعاد بنجاح',
+                            style: TextStyle(
+                                color: Colors.white,
+                                decorationStyle: TextDecorationStyle.double),
+                          ),
+                          backgroundColor: Colors.green,
+                        ),
+                      );
+                    }
+                  },
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'إحجز ميعاد',
+                    style: Styles.textStyle20.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
