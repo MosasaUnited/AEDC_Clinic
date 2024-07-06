@@ -18,7 +18,7 @@ class DekhelaClinic extends StatelessWidget {
       child: InkWell(
         highlightColor: Colors.amberAccent,
         onTap: () {
-          GoRouter.of(context).push(AppRouter.kLogin);
+          GoRouter.of(context).push(AppRouter.kHomeView);
         },
         child: const Card(
           color: Colors.transparent,
