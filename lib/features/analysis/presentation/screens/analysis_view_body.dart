@@ -1,4 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
+import 'package:aedc_clinic/core/widgets/custom_date_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -15,8 +15,6 @@ class AnalysisViewBody extends StatefulWidget {
 }
 
 class _AnalysisViewBodyState extends State<AnalysisViewBody> {
-  final pickDateController = TextEditingController();
-
   final formKey = GlobalKey<FormState>();
 
   final List<String> dropDownItems = [
@@ -53,7 +51,7 @@ class _AnalysisViewBodyState extends State<AnalysisViewBody> {
                       value: selectedTextFieldItem,
                       validator: (value) {
                         if (value == '') {
-                          return 'من فضلك اختر مركز الأشعة';
+                          return 'من فضلك اختر مركز التحاليل';
                         }
                         return null;
                       },
@@ -80,38 +78,9 @@ class _AnalysisViewBodyState extends State<AnalysisViewBody> {
                     SizedBox(
                       height: 20.h,
                     ),
-                    TextFormField(
-                      controller: pickDateController,
-                      decoration: const InputDecoration(
+                    CustomDatePicker(
                         hintText: 'إختر اليوم',
-                        border: OutlineInputBorder(),
-                      ),
-                      readOnly: true,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'من فضلك اختر اليوم';
-                        }
-                        return null;
-                      },
-                      onTap: () async {
-                        final selectDate = await showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime.now(),
-                          lastDate: DateTime.parse('2038-01-01'),
-                        ).then((value) {
-                          pickDateController.text =
-                              DateFormat.yMMMd().format(value!);
-                        });
-                        if (selectDate != null) {
-                          print(selectDate);
-                          final formattedDate = selectDate.format(context);
-                          pickDateController.text = formattedDate;
-                        } else {
-                          print('Date not selected');
-                        }
-                      },
-                    ),
+                        validatorText: ' من فضلك اختر اليوم'),
                   ],
                 ),
                 SizedBox(

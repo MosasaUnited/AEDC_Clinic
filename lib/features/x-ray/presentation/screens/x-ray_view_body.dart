@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -17,8 +16,6 @@ class XrayViewBody extends StatefulWidget {
 }
 
 class _XrayViewBodyState extends State<XrayViewBody> {
-  final pickDateController = TextEditingController();
-
   final formKey = GlobalKey<FormState>();
 
   final List<String> dropDownItems = [
@@ -97,38 +94,6 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                     CustomDatePicker(
                       hintText: 'اختار اليوم',
                       validatorText: 'من فضلك اختر اليوم',
-                    ),
-                    TextFormField(
-                      controller: pickDateController,
-                      decoration: const InputDecoration(
-                        hintText: 'إختر اليوم',
-                        border: OutlineInputBorder(),
-                      ),
-                      readOnly: true,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'من فضلك اختر اليوم';
-                        }
-                        return null;
-                      },
-                      onTap: () async {
-                        final selectDate = await showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime.now(),
-                          lastDate: DateTime.parse('2038-01-01'),
-                        ).then((value) {
-                          pickDateController.text =
-                              DateFormat.yMMMd().format(value!);
-                        });
-                        if (selectDate != null) {
-                          print(selectDate);
-                          final formattedDate = selectDate.format(context);
-                          pickDateController.text = formattedDate;
-                        } else {
-                          print('Date not selected');
-                        }
-                      },
                     ),
                     SizedBox(height: 20.h),
                   ],

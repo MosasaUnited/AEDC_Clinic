@@ -1,4 +1,5 @@
-import 'package:easy_localization/easy_localization.dart';
+import 'package:aedc_clinic/core/widgets/custom_date_picker.dart';
+import 'package:aedc_clinic/core/widgets/custom_time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -16,10 +17,6 @@ class MonthlyTreatmentViewBody extends StatefulWidget {
 }
 
 class _MonthlyTreatmentViewBodyState extends State<MonthlyTreatmentViewBody> {
-  final pickTimeController = TextEditingController();
-
-  final pickDateController = TextEditingController();
-
   final formKey = GlobalKey<FormState>();
 
   final List<String> dropDownItems = [
@@ -81,64 +78,13 @@ class _MonthlyTreatmentViewBodyState extends State<MonthlyTreatmentViewBody> {
                     SizedBox(
                       height: 20.h,
                     ),
-                    TextFormField(
-                      controller: pickDateController,
-                      decoration: const InputDecoration(
+                    CustomDatePicker(
                         hintText: 'إختر اليوم',
-                        border: OutlineInputBorder(),
-                      ),
-                      readOnly: true,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'من فضلك اختر اليوم';
-                        }
-                        return null;
-                      },
-                      onTap: () async {
-                        final selectDate = await showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime.now(),
-                          lastDate: DateTime.parse('2038-01-01'),
-                        ).then((value) {
-                          pickDateController.text =
-                              DateFormat.yMMMd().format(value!);
-                        });
-                        if (selectDate != null) {
-                          print(selectDate);
-                          final formattedDate = selectDate.format(context);
-                          pickDateController.text = formattedDate;
-                        } else {
-                          print('Date not selected');
-                        }
-                      },
-                    ),
+                        validatorText: 'من فضلك اختر اليوم'),
                     SizedBox(height: 20.h),
-                    TextFormField(
-                      controller: pickTimeController,
-                      decoration: const InputDecoration(
-                          hintText: 'إختر الوقت', border: OutlineInputBorder()),
-                      readOnly: true,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'من فضلك اختار الوقت';
-                        }
-                        return null;
-                      },
-                      onTap: () async {
-                        final selectTime = await showTimePicker(
-                          context: context,
-                          initialTime: TimeOfDay.now(),
-                        );
-                        if (selectTime != null) {
-                          print(selectTime);
-                          final formattedTime = selectTime.format(context);
-                          pickTimeController.text = formattedTime;
-                        } else {
-                          print('Time is Not Selected');
-                        }
-                      },
-                    ),
+                    CustomTimePicker(
+                        hintText: 'إختر الوقت',
+                        validatedText: 'من فضلك اختار الوقت')
                   ],
                 ),
               ),
