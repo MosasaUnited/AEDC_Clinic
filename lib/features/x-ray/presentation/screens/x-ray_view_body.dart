@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/constants/svg_assets.dart';
+import '../../../../core/router/app_router.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/custom_button_animation.dart';
 import '../../../../core/widgets/custom_date_picker.dart';
@@ -132,6 +134,25 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                 const XrayPaperNotice(
                   text:
                       'إذا كان ليس لديك تحويل من مستشفى لعمل آشعة . برجاء حجز استشارة من هنا ',
+                ),
+                SizedBox(
+                  height: 50.h,
+                ),
+                CustomButtonAnimation(
+                  color: Colors.amber,
+                  onPressed: () async {
+                    Future.delayed(const Duration(milliseconds: 400), () {
+                      GoRouter.of(context).push(AppRouter.kExamination);
+                    });
+                  },
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'إحجز استشارة',
+                    style: Styles.textStyle20.copyWith(
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
                 ),
               ],
             ),
