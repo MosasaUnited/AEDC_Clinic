@@ -40,12 +40,12 @@ class CustomSliderOnboarding extends StatelessWidget {
                             ),
                             Lottie.asset(
                               onBoardingList[index].image!,
-                              height: 300.h,
-                              width: 300.w,
+                              height: 250.h,
+                              width: 250.w,
                               fit: BoxFit.contain,
                             ),
                             SizedBox(
-                              height: 10.h,
+                              height: 20.h,
                             ),
                             Text(
                               onBoardingList[index].body!,
