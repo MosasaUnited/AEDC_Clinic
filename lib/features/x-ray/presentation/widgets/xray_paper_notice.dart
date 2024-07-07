@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/theme/styles.dart';
 
-class XrayPaperNotice extends StatelessWidget {
-  const XrayPaperNotice({super.key, required this.text});
+class PaperNotice extends StatelessWidget {
+  const PaperNotice({super.key, required this.text});
 
   final String text;
 

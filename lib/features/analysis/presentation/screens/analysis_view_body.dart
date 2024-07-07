@@ -2,10 +2,13 @@ import 'package:aedc_clinic/core/widgets/custom_date_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/constants/svg_assets.dart';
+import '../../../../core/router/app_router.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/custom_button_animation.dart';
+import '../../../x-ray/presentation/widgets/xray_paper_notice.dart';
 
 class AnalysisViewBody extends StatefulWidget {
   const AnalysisViewBody({super.key});
@@ -110,7 +113,33 @@ class _AnalysisViewBodyState extends State<AnalysisViewBody> {
                       fontWeight: FontWeight.w900,
                     ),
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 50.h,
+                ),
+                const PaperNotice(
+                  text:
+                      'إذا كان ليس لديك تحويل من مستشفى لعمل تحليل . برجاء حجز استشارة من هنا ',
+                ),
+                SizedBox(
+                  height: 50.h,
+                ),
+                CustomButtonAnimation(
+                  color: Colors.amber,
+                  onPressed: () async {
+                    Future.delayed(const Duration(milliseconds: 400), () {
+                      GoRouter.of(context).push(AppRouter.kExamination);
+                    });
+                  },
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'إحجز استشارة',
+                    style: Styles.textStyle20.copyWith(
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

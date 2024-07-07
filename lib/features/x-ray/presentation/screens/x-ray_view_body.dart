@@ -48,7 +48,7 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                     SizedBox(
                       height: 50.h,
                     ),
-                    const XrayPaperNotice(
+                    const PaperNotice(
                       text:
                           'إذا كان لديك تحويل من مستشفى لعمل آشعة ارفع صورة التحويل من هنا',
                     ),
@@ -56,7 +56,7 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                     SizedBox(
                       height: 15.h,
                     ),
-                    const XrayPaperNotice(
+                    const PaperNotice(
                         text:
                             'اختر مركز الأشعة المراد عمل به الآشعة من القائمة التالية'),
                     SizedBox(
@@ -131,7 +131,7 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                 SizedBox(
                   height: 50.h,
                 ),
-                const XrayPaperNotice(
+                const PaperNotice(
                   text:
                       'إذا كان ليس لديك تحويل من مستشفى لعمل آشعة . برجاء حجز استشارة من هنا ',
                 ),
