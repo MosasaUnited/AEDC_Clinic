@@ -74,6 +74,8 @@ dependencies:
   url_launcher: ^6.3.0
   # Device Preview for Flutter
   device_preview: ^1.2.0
+  #To Give Access for Other Features On Mobile Inside The App
+  permission_handler: ^11.3.1
   flutter:
     sdk: flutter
 
