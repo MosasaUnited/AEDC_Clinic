@@ -1,28 +1,29 @@
-import 'package:aedc_clinic/core/models/selected_images_model.dart';
-import 'package:aedc_clinic/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-class CustomSingleImagePicker extends StatefulWidget {
-  const CustomSingleImagePicker({super.key});
+import '../models/selected_images_model.dart';
+import '../theme/colors.dart';
+
+class CustomCameraImagePicker extends StatefulWidget {
+  const CustomCameraImagePicker({super.key});
 
   @override
-  State<CustomSingleImagePicker> createState() =>
-      _CustomSingleImagePickerState();
+  State<CustomCameraImagePicker> createState() =>
+      _CustomCameraImagePickerState();
 }
 
-class _CustomSingleImagePickerState extends State<CustomSingleImagePicker> {
+class _CustomCameraImagePickerState extends State<CustomCameraImagePicker> {
   SelectedImagesModel selectedImages = SelectedImagesModel();
 
-  void pickSingleImage() async {
-    var storageStatus = await Permission.storage.status;
+  void captureCameraImage() async {
+    var storageStatus = await Permission.camera.status;
     if (storageStatus.isDenied) {
-      await Permission.storage.request();
+      await Permission.camera.request();
     } else if (storageStatus.isGranted) {
       final ImagePicker picker = ImagePicker();
-      final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+      final XFile? image = await picker.pickImage(source: ImageSource.camera);
       if (image != null) {
         selectedImages.pickedImages.add(image);
       }
@@ -42,8 +43,8 @@ class _CustomSingleImagePickerState extends State<CustomSingleImagePicker> {
               color: MyColors.appColor,
               textColor: Colors.white,
               padding: const EdgeInsets.all(20),
-              onPressed: pickSingleImage,
-              child: const Text('إرفع صورة التحويل من هنا'),
+              onPressed: captureCameraImage,
+              child: const Text('صور التحويل من هنا'),
             ),
           ),
         ],

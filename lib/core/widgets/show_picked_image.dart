@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:aedc_clinic/core/models/selected_images_model.dart';
 import 'package:flutter/material.dart';
 
 class ShowPickedImage extends StatelessWidget {
@@ -5,11 +8,13 @@ class ShowPickedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SelectedImagesModel selectedImages = SelectedImagesModel();
     return Scaffold(
       body: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2),
-          itemCount: 2,
+            crossAxisCount: 2,
+          ),
+          itemCount: selectedImages.pickedImages.length,
           itemBuilder: (BuildContext context, int index) {
             return ClipRRect(
               borderRadius: BorderRadius.circular(8),
@@ -18,7 +23,10 @@ class ShowPickedImage extends StatelessWidget {
                   SizedBox(
                     height: 200,
                     width: 200,
-                    // child: ,
+                    child: Image.file(
+                      File(selectedImages.pickedImages[index].path),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ],
               ),

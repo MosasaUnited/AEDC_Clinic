@@ -1,30 +1,32 @@
 import 'package:aedc_clinic/core/models/selected_images_model.dart';
-import 'package:aedc_clinic/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-class CustomSingleImagePicker extends StatefulWidget {
-  const CustomSingleImagePicker({super.key});
+import '../theme/colors.dart';
+
+class CustomMultipleImagePicker extends StatefulWidget {
+  const CustomMultipleImagePicker({super.key});
 
   @override
-  State<CustomSingleImagePicker> createState() =>
-      _CustomSingleImagePickerState();
+  State<CustomMultipleImagePicker> createState() =>
+      _CustomMultipleImagePickerState();
 }
 
-class _CustomSingleImagePickerState extends State<CustomSingleImagePicker> {
+class _CustomMultipleImagePickerState extends State<CustomMultipleImagePicker> {
   SelectedImagesModel selectedImages = SelectedImagesModel();
 
-  void pickSingleImage() async {
+  void pickMultipleImages() async {
     var storageStatus = await Permission.storage.status;
     if (storageStatus.isDenied) {
       await Permission.storage.request();
     } else if (storageStatus.isGranted) {
       final ImagePicker picker = ImagePicker();
-      final XFile? image = await picker.pickImage(source: ImageSource.gallery);
-      if (image != null) {
-        selectedImages.pickedImages.add(image);
+      final List<XFile> images = await picker.pickMultiImage();
+
+      if (images.isNotEmpty) {
+        selectedImages.pickedImages.addAll(images);
       }
     }
   }
@@ -42,8 +44,8 @@ class _CustomSingleImagePickerState extends State<CustomSingleImagePicker> {
               color: MyColors.appColor,
               textColor: Colors.white,
               padding: const EdgeInsets.all(20),
-              onPressed: pickSingleImage,
-              child: const Text('إرفع صورة التحويل من هنا'),
+              onPressed: pickMultipleImages,
+              child: const Text('إرفع الصور من هنا'),
             ),
           ),
         ],

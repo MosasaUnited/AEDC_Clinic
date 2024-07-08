@@ -8,6 +8,7 @@ import '../../../../core/router/app_router.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/custom_button_animation.dart';
 import '../../../../core/widgets/custom_date_picker.dart';
+import '../../../../core/widgets/custom_single_image_picker.dart';
 import '../widgets/xray_paper_notice.dart';
 
 class XrayViewBody extends StatefulWidget {
@@ -52,7 +53,10 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                       text:
                           'إذا كان لديك تحويل من مستشفى لعمل آشعة ارفع صورة التحويل من هنا',
                     ),
-                    //TODO: Add Teeth Commission File or Image Picker
+                    SizedBox(
+                      height: 15.h,
+                    ),
+                    const CustomSingleImagePicker(),
                     SizedBox(
                       height: 15.h,
                     ),
