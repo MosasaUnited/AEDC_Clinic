@@ -9,6 +9,8 @@ import '../../../../core/router/app_router.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/custom_button_animation.dart';
 import '../../../../core/widgets/custom_camera_image_picker.dart';
+import '../../../../core/widgets/upload_image_button_text.dart';
+import '../../../../core/widgets/upload_image_notice_text.dart';
 import '../../../x-ray/presentation/widgets/xray_paper_notice.dart';
 
 class AnalysisViewBody extends StatefulWidget {
@@ -58,7 +60,14 @@ class _AnalysisViewBodyState extends State<AnalysisViewBody> {
                     SizedBox(
                       height: 15.h,
                     ),
-                    const CustomCameraImagePicker(),
+                    const CustomCameraImagePicker(
+                      buttonText: UploadImageButtonText(
+                        text: 'ارفع صورة تحويل التحليل من هنا',
+                      ),
+                      noticeText: UploadImageNoticeText(
+                        text: 'لم يتم رفع صورة تحويل التحليل بعد',
+                      ),
+                    ),
                     SizedBox(
                       height: 15.h,
                     ),

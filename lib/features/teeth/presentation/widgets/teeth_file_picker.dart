@@ -1,3 +1,5 @@
+import 'package:aedc_clinic/core/widgets/upload_image_button_text.dart';
+import 'package:aedc_clinic/core/widgets/upload_image_notice_text.dart';
 import 'package:aedc_clinic/features/teeth/presentation/widgets/teeth_important_notice.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +18,12 @@ class TeethFilePicker extends StatelessWidget {
         SizedBox(
           height: 15.h,
         ),
-        const CustomCameraImagePicker(),
+        const CustomCameraImagePicker(
+          buttonText: UploadImageButtonText(
+              text: 'من فضلك ارفع صور صورة القومسيون من هنا'),
+          noticeText:
+              UploadImageNoticeText(text: ' لم يتم رفع صورة القومسيون بعد'),
+        ),
       ],
     );
   }

@@ -1,3 +1,5 @@
+import 'package:aedc_clinic/core/widgets/upload_image_button_text.dart';
+import 'package:aedc_clinic/core/widgets/upload_image_notice_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -56,7 +58,11 @@ class _XrayViewBodyState extends State<XrayViewBody> {
                     SizedBox(
                       height: 15.h,
                     ),
-                    const CustomCameraImagePicker(),
+                    const CustomCameraImagePicker(
+                        buttonText: UploadImageButtonText(
+                            text: 'من فضلك صور تحويل الآشعة'),
+                        noticeText: UploadImageNoticeText(
+                            text: 'لم يتم رفع صورة تحويل الأشعة بعد')),
                     SizedBox(
                       height: 15.h,
                     ),

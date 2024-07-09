@@ -8,7 +8,12 @@ import 'package:permission_handler/permission_handler.dart';
 import '../theme/colors.dart';
 
 class CustomCameraImagePicker extends StatefulWidget {
-  const CustomCameraImagePicker({super.key});
+  const CustomCameraImagePicker(
+      {super.key, required this.buttonText, required this.noticeText});
+
+  final Widget buttonText;
+
+  final Widget noticeText;
 
   @override
   State<CustomCameraImagePicker> createState() =>
@@ -39,19 +44,14 @@ class _CustomCameraImagePickerState extends State<CustomCameraImagePicker> {
         mainAxisSize: MainAxisSize.min,
         children: [
           SizedBox(
-            height: 70.h,
+            height: 100.h,
             width: 200.w,
             child: MaterialButton(
               color: MyColors.appColor,
               textColor: Colors.white,
               padding: const EdgeInsets.all(20),
               onPressed: captureCameraImage,
-              child: const Text(
-                'صور التحويل من هنا',
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
+              child: widget.buttonText,
             ),
           ),
           SizedBox(
@@ -62,12 +62,7 @@ class _CustomCameraImagePickerState extends State<CustomCameraImagePicker> {
                   height: 150.h,
                   width: 100.w,
                   child: Image.file(selectedImage!))
-              : const Text(
-                  'من فضلك صور التحويل',
-                  style: TextStyle(
-                    color: Colors.red,
-                  ),
-                ),
+              : widget.noticeText,
           SizedBox(
             height: 50.h,
           )
