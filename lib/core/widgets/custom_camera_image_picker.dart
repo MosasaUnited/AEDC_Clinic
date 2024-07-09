@@ -1,9 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import '../models/selected_images_model.dart';
 import '../theme/colors.dart';
 
 class CustomCameraImagePicker extends StatefulWidget {
@@ -15,18 +16,19 @@ class CustomCameraImagePicker extends StatefulWidget {
 }
 
 class _CustomCameraImagePickerState extends State<CustomCameraImagePicker> {
-  SelectedImagesModel selectedImages = SelectedImagesModel();
+  File? selectedImage;
 
-  void captureCameraImage() async {
+  Future<void> captureCameraImage() async {
     var storageStatus = await Permission.camera.status;
     if (storageStatus.isDenied) {
       await Permission.camera.request();
     } else if (storageStatus.isGranted) {
-      final ImagePicker picker = ImagePicker();
-      final XFile? image = await picker.pickImage(source: ImageSource.camera);
-      if (image != null) {
-        selectedImages.pickedImages.add(image);
-      }
+      final returnedImage =
+          await ImagePicker().pickImage(source: ImageSource.camera);
+      if (returnedImage == null) return;
+      setState(() {
+        selectedImage = File(returnedImage.path);
+      });
     }
   }
 
@@ -44,9 +46,31 @@ class _CustomCameraImagePickerState extends State<CustomCameraImagePicker> {
               textColor: Colors.white,
               padding: const EdgeInsets.all(20),
               onPressed: captureCameraImage,
-              child: const Text('صور التحويل من هنا'),
+              child: const Text(
+                'صور التحويل من هنا',
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
             ),
           ),
+          SizedBox(
+            height: 20.h,
+          ),
+          selectedImage != null
+              ? SizedBox(
+                  height: 150.h,
+                  width: 100.w,
+                  child: Image.file(selectedImage!))
+              : const Text(
+                  'من فضلك صور التحويل',
+                  style: TextStyle(
+                    color: Colors.red,
+                  ),
+                ),
+          SizedBox(
+            height: 50.h,
+          )
         ],
       ),
     );

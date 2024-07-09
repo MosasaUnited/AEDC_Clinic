@@ -8,6 +8,7 @@ import '../../../../core/constants/svg_assets.dart';
 import '../../../../core/router/app_router.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/custom_button_animation.dart';
+import '../../../../core/widgets/custom_camera_image_picker.dart';
 import '../../../x-ray/presentation/widgets/xray_paper_notice.dart';
 
 class AnalysisViewBody extends StatefulWidget {
@@ -49,6 +50,17 @@ class _AnalysisViewBodyState extends State<AnalysisViewBody> {
                     ),
                     SizedBox(
                       height: 50.h,
+                    ),
+                    const PaperNotice(
+                      text:
+                          'إذا كان لديك تحويل من مستشفى لعمل تحاليل ارفع صورة التحويل من هنا',
+                    ),
+                    SizedBox(
+                      height: 15.h,
+                    ),
+                    const CustomCameraImagePicker(),
+                    SizedBox(
+                      height: 15.h,
                     ),
                     DropdownButtonFormField(
                       value: selectedTextFieldItem,
