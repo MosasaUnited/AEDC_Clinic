@@ -34,10 +34,10 @@ class _MonthlyTreatmentViewBodyState extends State<MonthlyTreatmentViewBody> {
       child: Center(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Column(
-            children: [
-              SingleChildScrollView(
-                child: Column(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Column(
                   children: [
                     SvgPicture.asset(
                       SvgAssets.monthlyTreatmentSvg,
@@ -87,34 +87,38 @@ class _MonthlyTreatmentViewBodyState extends State<MonthlyTreatmentViewBody> {
                         validatedText: 'من فضلك اختار الوقت')
                   ],
                 ),
-              ),
-              const Spacer(),
-              CustomButtonAnimation(
-                onPressed: () async {
-                  if (formKey.currentState!.validate()) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text(
-                          'تم حجز الميعاد بنجاح',
-                          style: TextStyle(
-                              color: Colors.white,
-                              decorationStyle: TextDecorationStyle.double),
-                        ),
-                        backgroundColor: Colors.green,
-                      ),
-                    );
-                  }
-                },
-                child: Text(
-                  textAlign: TextAlign.center,
-                  'إحجز ميعاد',
-                  style: Styles.textStyle20.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                  ),
+                SizedBox(
+                  height: 50.h,
                 ),
-              )
-            ],
+                CustomButtonAnimation(
+                  onPressed: () async {
+                    Future.delayed(const Duration(milliseconds: 400), () {
+                      if (formKey.currentState!.validate()) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              'تم حجز الميعاد بنجاح',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  decorationStyle: TextDecorationStyle.double),
+                            ),
+                            backgroundColor: Colors.green,
+                          ),
+                        );
+                      }
+                    });
+                  },
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'إحجز ميعاد',
+                    style: Styles.textStyle20.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

@@ -96,19 +96,21 @@ class _ExaminationViewBodyState extends State<ExaminationViewBody> {
                 ),
                 CustomButtonAnimation(
                   onPressed: () async {
-                    if (formKey.currentState!.validate()) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text(
-                            'تم حجز الاستشارة بنجاح',
-                            style: TextStyle(
-                                color: Colors.white,
-                                decorationStyle: TextDecorationStyle.double),
+                    Future.delayed(const Duration(milliseconds: 400), () {
+                      if (formKey.currentState!.validate()) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              'تم حجز الاستشارة بنجاح',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  decorationStyle: TextDecorationStyle.double),
+                            ),
+                            backgroundColor: Colors.green,
                           ),
-                          backgroundColor: Colors.green,
-                        ),
-                      );
-                    }
+                        );
+                      }
+                    });
                   },
                   child: Text(
                     textAlign: TextAlign.center,

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:aedc_clinic/core/models/selected_images_model.dart';
 import 'package:aedc_clinic/core/theme/colors.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +16,9 @@ class CustomSingleImagePicker extends StatefulWidget {
 }
 
 class _CustomSingleImagePickerState extends State<CustomSingleImagePicker> {
-  SelectedImagesModel selectedImages = SelectedImagesModel();
+  SelectedImagesModel? selectedImages = SelectedImagesModel();
 
-  void pickSingleImage() async {
+  Future<void> pickSingleImage() async {
     var storageStatus = await Permission.storage.status;
     if (storageStatus.isDenied) {
       await Permission.storage.request();
@@ -24,7 +26,7 @@ class _CustomSingleImagePickerState extends State<CustomSingleImagePicker> {
       final ImagePicker picker = ImagePicker();
       final XFile? image = await picker.pickImage(source: ImageSource.gallery);
       if (image != null) {
-        selectedImages.pickedImages.add(image);
+        selectedImages!.pickedImages.add(image);
       }
     }
   }
@@ -46,6 +48,12 @@ class _CustomSingleImagePickerState extends State<CustomSingleImagePicker> {
               child: const Text('إرفع صورة التحويل من هنا'),
             ),
           ),
+          SizedBox(
+            height: 20.h,
+          ),
+          selectedImages != null
+              ? Image.file(selectedImages! as File)
+              : const Text('Please Selected An Image'),
         ],
       ),
     );

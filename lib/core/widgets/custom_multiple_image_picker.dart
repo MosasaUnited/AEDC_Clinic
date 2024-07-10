@@ -17,7 +17,7 @@ class CustomMultipleImagePicker extends StatefulWidget {
 class _CustomMultipleImagePickerState extends State<CustomMultipleImagePicker> {
   SelectedImagesModel selectedImages = SelectedImagesModel();
 
-  void pickMultipleImages() async {
+  Future<void> pickMultipleImages() async {
     var storageStatus = await Permission.storage.status;
     if (storageStatus.isDenied) {
       await Permission.storage.request();

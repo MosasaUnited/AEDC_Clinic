@@ -39,7 +39,12 @@ class CommissionViewBody extends StatelessWidget {
             ),
             Center(
               child: CustomButtonAnimation(
-                onPressed: () {},
+                onPressed: () {
+                  Future.delayed(
+                    const Duration(milliseconds: 400),
+                    () {},
+                  );
+                },
                 child: Text(
                   textAlign: TextAlign.center,
                   'اختار ميعاد لتقديم الأوراق المطلوبة',

@@ -94,19 +94,21 @@ class _TeethViewBodyState extends State<TeethViewBody> {
                 ),
                 CustomButtonAnimation(
                   onPressed: () async {
-                    if (formKey.currentState!.validate()) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text(
-                            'تم حجز الاستشارة بنجاح',
-                            style: TextStyle(
-                                color: Colors.white,
-                                decorationStyle: TextDecorationStyle.double),
+                    Future.delayed(const Duration(milliseconds: 400), () {
+                      if (formKey.currentState!.validate()) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              'تم حجز الاستشارة بنجاح',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  decorationStyle: TextDecorationStyle.double),
+                            ),
+                            backgroundColor: Colors.green,
                           ),
-                          backgroundColor: Colors.green,
-                        ),
-                      );
-                    }
+                        );
+                      }
+                    });
                   },
                   child: Text(
                     textAlign: TextAlign.center,
@@ -133,17 +135,19 @@ class _TeethViewBodyState extends State<TeethViewBody> {
                 ),
                 CustomButtonAnimation(
                   onPressed: () async {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text(
-                          'تم حجز ميعاد بنجاح',
-                          style: TextStyle(
-                              color: Colors.white,
-                              decorationStyle: TextDecorationStyle.double),
+                    Future.delayed(const Duration(milliseconds: 400), () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text(
+                            'تم حجز ميعاد بنجاح',
+                            style: TextStyle(
+                                color: Colors.white,
+                                decorationStyle: TextDecorationStyle.double),
+                          ),
+                          backgroundColor: Colors.green,
                         ),
-                        backgroundColor: Colors.green,
-                      ),
-                    );
+                      );
+                    });
                   },
                   color: Colors.amber,
                   child: Text(
