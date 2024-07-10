@@ -22,7 +22,11 @@ class ContactUs extends StatelessWidget {
             await launchUrl(Uri.parse(AppStrings.customerService));
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('خدمة العملاء ليس متاحة الأن')));
+              const SnackBar(
+                content: Text('خدمة العملاء ليس متاحة الأن'),
+                backgroundColor: Colors.redAccent,
+              ),
+            );
           }
         },
         child: Row(

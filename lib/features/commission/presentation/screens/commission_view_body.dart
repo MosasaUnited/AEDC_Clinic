@@ -3,8 +3,10 @@ import 'package:aedc_clinic/features/commission/presentation/widgets/paper_must_
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/constants/svg_assets.dart';
+import '../../../../core/router/app_router.dart';
 import '../../../../core/widgets/custom_button_animation.dart';
 import '../widgets/important_notice.dart';
 
@@ -42,7 +44,9 @@ class CommissionViewBody extends StatelessWidget {
                 onPressed: () {
                   Future.delayed(
                     const Duration(milliseconds: 400),
-                    () {},
+                    () {
+                      GoRouter.of(context).push(AppRouter.kCommissionDetails);
+                    },
                   );
                 },
                 child: Text(

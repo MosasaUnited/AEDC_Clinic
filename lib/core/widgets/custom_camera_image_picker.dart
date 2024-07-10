@@ -21,6 +21,7 @@ class CustomCameraImagePicker extends StatefulWidget {
 }
 
 class _CustomCameraImagePickerState extends State<CustomCameraImagePicker> {
+  final ImagePicker imagePicker = ImagePicker();
   File? selectedImage;
 
   Future<void> captureCameraImage() async {
@@ -29,7 +30,7 @@ class _CustomCameraImagePickerState extends State<CustomCameraImagePicker> {
       await Permission.camera.request();
     } else if (storageStatus.isGranted) {
       final returnedImage =
-          await ImagePicker().pickImage(source: ImageSource.camera);
+          await imagePicker.pickImage(source: ImageSource.camera);
       if (returnedImage == null) return;
       setState(() {
         selectedImage = File(returnedImage.path);
@@ -61,7 +62,8 @@ class _CustomCameraImagePickerState extends State<CustomCameraImagePicker> {
               ? SizedBox(
                   height: 150.h,
                   width: 100.w,
-                  child: Image.file(selectedImage!))
+                  child: Image.file(selectedImage!),
+                )
               : widget.noticeText,
           SizedBox(
             height: 50.h,
