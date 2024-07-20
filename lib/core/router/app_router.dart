@@ -1,6 +1,5 @@
 import 'package:aedc_clinic/features/analysis/presentation/analysis_view.dart';
 import 'package:aedc_clinic/features/commission/presentation/commission_view.dart';
-import 'package:aedc_clinic/features/commission/presentation/screens/commission_details_screen.dart';
 import 'package:aedc_clinic/features/examination/presentation/examination_view.dart';
 import 'package:aedc_clinic/features/monthly_treatment/presentation/monthly_treatment_view.dart';
 import 'package:aedc_clinic/features/teeth/presentation/teeth_view.dart';
@@ -12,6 +11,7 @@ import '../../features/home/home.dart';
 import '../../features/home/presentation/widgets/know_your_rights_reader.dart';
 import '../../features/login/presentation/login_screen.dart';
 import '../../features/onboarding/onboarding_screen.dart';
+import '../../features/teeth/presentation/screens/teeth_commission_screen.dart';
 
 abstract class AppRouter {
   static const kLogin = '/loginScreen';
@@ -25,6 +25,7 @@ abstract class AppRouter {
   static const kTeeth = '/teeth';
   static const kXray = '/xray';
   static const kCommissionDetails = '/commissionDetails';
+  static const kTeethCommission = '/teethCommission';
 
   static final router = GoRouter(
     routes: [
@@ -73,8 +74,8 @@ abstract class AppRouter {
         builder: (context, state) => const XrayView(),
       ),
       GoRoute(
-        path: kCommissionDetails,
-        builder: (context, state) => const CommissionDetailsScreen(),
+        path: kTeethCommission,
+        builder: (context, state) => const TeethCommissionScreen(),
       ),
     ],
   );

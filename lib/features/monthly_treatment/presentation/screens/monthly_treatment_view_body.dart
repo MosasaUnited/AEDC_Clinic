@@ -1,5 +1,4 @@
 import 'package:aedc_clinic/core/widgets/custom_date_picker.dart';
-import 'package:aedc_clinic/core/widgets/custom_time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -82,9 +81,6 @@ class _MonthlyTreatmentViewBodyState extends State<MonthlyTreatmentViewBody> {
                         hintText: 'إختر اليوم',
                         validatorText: 'من فضلك اختر اليوم'),
                     SizedBox(height: 20.h),
-                    CustomTimePicker(
-                        hintText: 'إختر الوقت',
-                        validatedText: 'من فضلك اختار الوقت')
                   ],
                 ),
                 SizedBox(

@@ -1,12 +1,12 @@
 import 'package:aedc_clinic/core/widgets/custom_date_picker.dart';
-import 'package:aedc_clinic/core/widgets/custom_time_picker.dart';
-import 'package:aedc_clinic/features/teeth/presentation/widgets/teeth_file_picker.dart';
-import 'package:aedc_clinic/features/teeth/presentation/widgets/teeth_important_notice.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/constants/svg_assets.dart';
+import '../../../../core/router/app_router.dart';
+import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/custom_button_animation.dart';
 
@@ -83,9 +83,6 @@ class _TeethViewBodyState extends State<TeethViewBody> {
                           hintText: 'إختر اليوم',
                           validatorText: 'من فضلك اختر اليوم'),
                       SizedBox(height: 20.h),
-                      CustomTimePicker(
-                          hintText: 'إختر الوقت',
-                          validatedText: 'من فضلك اختار الوقت')
                     ],
                   ),
                 ),
@@ -120,44 +117,33 @@ class _TeethViewBodyState extends State<TeethViewBody> {
                   ),
                 ),
                 SizedBox(
-                  height: 10.h,
-                ),
-                const TeethImportantNotice(
-                  text:
-                      'إذا كان لديك قومسيون من مستشفى أو مركز الأسنان تأكد من وجود التحويل الخاص بك معك عند وجودك فى اليوم المحدد',
-                ),
-                SizedBox(
                   height: 20.h,
                 ),
-                const TeethFilePicker(),
-                SizedBox(
-                  height: 50.h,
-                ),
-                CustomButtonAnimation(
-                  onPressed: () async {
-                    Future.delayed(const Duration(milliseconds: 400), () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text(
-                            'تم حجز ميعاد بنجاح',
-                            style: TextStyle(
-                                color: Colors.white,
-                                decorationStyle: TextDecorationStyle.double),
+                Row(
+                  children: [
+                    Align(
+                      alignment: AlignmentDirectional.centerStart,
+                      child: TextButton(
+                        onPressed: () {
+                          GoRouter.of(context).push(AppRouter.kTeethCommission);
+                        },
+                        child: Text(
+                          'إضغط هنا',
+                          style: Styles.textStyle12.copyWith(
+                            color: MyColors.appColor,
                           ),
-                          backgroundColor: Colors.green,
                         ),
-                      );
-                    });
-                  },
-                  color: Colors.amber,
-                  child: Text(
-                    textAlign: TextAlign.center,
-                    'إحجز ميعاد',
-                    style: Styles.textStyle20.copyWith(
-                      color: Colors.black87,
-                      fontWeight: FontWeight.w900,
+                      ),
                     ),
-                  ),
+                    const Spacer(),
+                    Align(
+                      alignment: AlignmentDirectional.centerEnd,
+                      child: Text(
+                        'لديك قومسيون ؟',
+                        style: Styles.textStyle12,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

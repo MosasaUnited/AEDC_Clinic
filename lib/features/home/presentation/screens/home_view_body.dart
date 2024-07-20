@@ -1,4 +1,5 @@
 import 'package:aedc_clinic/core/theme/colors.dart';
+import 'package:aedc_clinic/core/widgets/simple_appbar.dart';
 import 'package:aedc_clinic/features/home/logic/bootom_nav_cubit/bottom_nav_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -41,12 +42,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           BottomNavCubit cubit = BottomNavCubit.get(context);
           return Scaffold(
             appBar: AppBar(
-              leading: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: const Icon(Icons.arrow_back_ios_new),
-              ),
+              leading: const SimpleAppbar(),
               actions: [
                 IconButton(
                   onPressed: () {
