@@ -1,6 +1,6 @@
 class ImageAssets {
   static const String loginScreenImage =
-      'assets/images/login_aedc_clinic_logo.png';
+      'assets/images/khadmat_logo.png';
   static const String salahEldinClinicImage =
       'assets/images/salah_eldin_clinic.jpg';
   static const String dekhelaClinicImage =

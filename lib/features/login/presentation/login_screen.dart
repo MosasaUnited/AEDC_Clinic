@@ -36,10 +36,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: MyColors.appColor,
                       fontWeight: FontWeightHelper.extraBold),
                 ),
+                SizedBox(
+                  height: 10.h,
+                ),
                 Image.asset(
                   ImageAssets.loginScreenImage,
                   width: double.infinity.w,
-                  height: 220.h,
+                  height: 200.h,
+                ),
+                SizedBox(
+                  height: 10.h,
                 ),
                 Form(
                   key: formKey,
