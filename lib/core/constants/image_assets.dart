@@ -6,6 +6,6 @@ class ImageAssets {
   static const String ibrahimyaClinicImage =
       'assets/images/ibrahimya_clinic.jpg';
   static const String sidiBeshrClinicImage =
-      'assets/images/ibrahimya_clinic.jpg';
+      'assets/images/sidi_beshr_clinic.jpg';
   static const String ehcCairoHospital = 'assets/images/ehc_cairo_hospital.jpg';
 }
