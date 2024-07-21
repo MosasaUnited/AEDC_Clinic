@@ -18,7 +18,7 @@ class KnowYourRights extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             backgroundColor: MyColors.appColor, shape: const LinearBorder()),
         onPressed: () {
-          GoRouter.of(context).push(AppRouter.kKnowRightsReader);
+          GoRouter.of(context).push(AppRouter.kKnowRightsDetails);
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -34,7 +34,7 @@ class KnowYourRights extends StatelessWidget {
             Text(
               textAlign: TextAlign.center,
               textDirection: TextDirection.rtl,
-              'إعرف حقوقك',
+              'حقوق و واجبات المريض',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w900,

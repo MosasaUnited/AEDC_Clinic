@@ -3,6 +3,7 @@ import 'package:aedc_clinic/features/commission/presentation/commission_view.dar
 import 'package:aedc_clinic/features/commission/presentation/screens/commission_details_screen.dart';
 import 'package:aedc_clinic/features/examination/presentation/examination_view.dart';
 import 'package:aedc_clinic/features/home/data/models/document_model.dart';
+import 'package:aedc_clinic/features/home/presentation/screens/know_your_rights_details.dart';
 import 'package:aedc_clinic/features/monthly_treatment/presentation/monthly_treatment_view.dart';
 import 'package:aedc_clinic/features/teeth/presentation/teeth_view.dart';
 import 'package:aedc_clinic/features/x-ray/presentation/x-ray_view.dart';
@@ -20,6 +21,7 @@ abstract class AppRouter {
   static const kLogin = '/loginScreen';
   // Know Your Rights
   static const kKnowRightsReader = '/knowYourRightsReader';
+  static const kKnowRightsDetails = '/knowYourRightsDetails';
   // Home
   static const kHomeView = '/homeView';
   // Choose Clinic
@@ -93,6 +95,10 @@ abstract class AppRouter {
       GoRoute(
         path: kCommissionDetails,
         builder: (context, state) => const CommissionDetailsScreen(),
+      ),
+      GoRoute(
+        path: kKnowRightsDetails,
+        builder: (context, state) => const KnowYourRightsDetails(),
       ),
     ],
   );
