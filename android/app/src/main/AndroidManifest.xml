@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
     <application
-        android:label="aedc_clinic"
+        android:label="AEDC Clinic"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icons">
         <activity
