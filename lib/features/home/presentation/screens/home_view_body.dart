@@ -47,10 +47,11 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                 IconButton(
                   onPressed: () {
                     showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return const ExitShowDialog();
-                        });
+                      context: context,
+                      builder: (BuildContext context) {
+                        return const ExitShowDialog();
+                      },
+                    );
                   },
                   icon: Image.asset(
                     IconAssets.exit,
@@ -62,7 +63,6 @@ class _HomeViewBodyState extends State<HomeViewBody> {
               title: Text(cubit.titles[cubit.currentIndex]),
               centerTitle: true,
               titleTextStyle: Styles.textStyle20.copyWith(
-                color: Colors.black87,
                 fontFamily: 'Cairo',
                 fontWeight: FontWeight.w800,
                 fontSize: 25.sp,

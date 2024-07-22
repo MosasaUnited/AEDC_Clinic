@@ -1,4 +1,3 @@
-import 'package:aedc_clinic/core/theme/colors.dart';
 import 'package:aedc_clinic/core/theme/styles.dart';
 import 'package:aedc_clinic/features/choose_clinic/presentation/widgets/dekhela_clinic.dart';
 import 'package:aedc_clinic/features/choose_clinic/presentation/widgets/ibrahimya_clinic.dart';
@@ -24,7 +23,6 @@ class TappableChooseClinicScreen extends StatelessWidget {
                     'إختر العيادة القريبة منك',
                     style: Styles.textStyle30.copyWith(
                       fontSize: 40.sp,
-                      color: MyColors.myGrey,
                     ),
                     textAlign: TextAlign.center,
                   ),
