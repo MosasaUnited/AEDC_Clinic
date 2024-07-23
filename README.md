@@ -20,7 +20,7 @@ Each screen provides valuable insights into the services and ethos of the Clinic
 
 ### Login Screen
 
-<img src="https://github.com/MosasaUnited/AEDC_Clinic/assets/79766907/19091084-a8a2-4335-8c9a-a5fdc04f5968" width="317" height="567">
+<img src="https://github.com/user-attachments/assets/1e6e5a1c-fece-4270-8beb-1b68c7573f27" width="317" height="567">
 
 - **User-Friendly**: With clear input fields for the username or medical file number and password, the design prioritizes ease of use.
 - **Secure**: The eye icon in the password field indicates a feature that allows users to toggle the visibility of their password, enhancing security while maintaining usability.
