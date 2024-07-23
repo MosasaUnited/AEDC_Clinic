@@ -36,4 +36,18 @@ Each screen provides valuable insights into the services and ethos of the Clinic
 
 This screen is designed to be interactive, allowing users to tap on cards to select their desired clinic branch.
 
+### Home Screen and it's Details
+
+<img src="https://github.com/user-attachments/assets/9ac9170e-688c-4c31-9874-9f4dea3b1284" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/a9a6b0ca-1c97-45ff-8fae-c3b1c60210bc" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/953f314c-6e14-4b6b-8a0b-4c1452a2af80" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/9661a9a9-fd16-4b2f-86cc-a717445eef30" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/f6c2f103-7326-4b34-aa3d-ad023529884a" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/0bc7c193-1b92-476a-aa53-f27c5d87d6eb" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/4da1a367-42bd-4530-8e4f-462b20db753f" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/9590a6ea-35ab-4ce4-80df-f0395bd3fbc4" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/e0a42b42-4da7-460d-87c4-02502a8a5bbe" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/0305c7c5-f853-42c7-a910-5ece7b03bcdf" width="200" height="350">
+
+
 
