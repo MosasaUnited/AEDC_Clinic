@@ -49,5 +49,8 @@ This screen is designed to be interactive, allowing users to tap on cards to sel
 <img src="https://github.com/user-attachments/assets/e0a42b42-4da7-460d-87c4-02502a8a5bbe" width="200" height="350">
 <img src="https://github.com/user-attachments/assets/0305c7c5-f853-42c7-a910-5ece7b03bcdf" width="200" height="350">
 
+#### Exit Show Dialog
+
+<img src="https://github.com/user-attachments/assets/c488dcfc-09f8-48d7-823c-f81f0d112c62" width="200" height="350">
 
 
